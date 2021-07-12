@@ -8,7 +8,7 @@ extras_require = {
 
 setup(
     name='fipper-python-sdk',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     author='RafRaf',
     author_email='smartrafraf@gmail.com',

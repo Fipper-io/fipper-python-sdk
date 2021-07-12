@@ -1,8 +1,10 @@
+from fipper_sdk import Rate
 from fipper_sdk.manager import ConfigManager
 
 
 modules = [
-    'ConfigManager'
+    'ConfigManager',
+    'Rate'
 ]
 
 try:

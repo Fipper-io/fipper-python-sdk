@@ -55,9 +55,11 @@ class BasicSync:
 
         if response.status_code == 200:
             raw_data = response.json()
-            blob = gzip.decompress(eval(raw_data['config'][self.environment]))  # TODO: Unsafe
+            config_env = raw_data['config'].get(self.environment)
+            blob = json.loads(gzip.decompress(eval(config_env)))\
+                if config_env else dict()  # TODO: unsafe
 
-            self.config = ConfigManager(config_data=json.loads(blob))
+            self.config = ConfigManager(config_data=blob)
             self.etag = raw_data['eTag']
             self.previous_sync_date = datetime.utcnow()
         elif not self.config:

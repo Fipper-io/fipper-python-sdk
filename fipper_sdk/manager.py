@@ -5,17 +5,17 @@ from fipper_sdk.utils import FlagType
 
 
 class Flag:
-    __slots__ = ('slug', 'flag_type', 'state', 'value')
+    __slots__ = ('slug', 'flag_type', 'available', 'value')
 
-    def __init__(self, slug: str, flag_type: FlagType, state: bool, value: Any):
+    def __init__(self, slug: str, flag_type: FlagType, available: bool, value: Any):
         self.slug = slug
         self.flag_type = flag_type
-        self.state = state
+        self.available = available
         self.value = value
 
     def get_value(self):
         if self.flag_type == FlagType.BOOLEAN:
-            return bool(self.state)
+            return bool(self.available)
         elif self.flag_type == FlagType.INTEGER:
             return int(self.value)
         elif self.flag_type == FlagType.STRING:
