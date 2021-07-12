@@ -1,5 +1,5 @@
-from fipper_sdk import Rate
 from fipper_sdk.manager import ConfigManager
+from fipper_sdk.utils import Rate
 
 
 modules = [
