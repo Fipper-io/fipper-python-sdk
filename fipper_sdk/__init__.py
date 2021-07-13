@@ -12,7 +12,7 @@ try:
 except ImportError:
     pass
 else:
-    from fipper_sdk.fetcher.basic import *
+    from fipper_sdk.client.basic import *
     modules.append('BasicSync')
 
 

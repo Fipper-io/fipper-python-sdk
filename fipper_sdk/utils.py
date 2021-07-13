@@ -3,6 +3,7 @@ from enum import IntEnum
 
 SERVER_HOST = 'https://sync.fipper.io'
 
+
 class Rate(IntEnum):
     RARELY = 15
     NORMAL = 7

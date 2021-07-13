@@ -39,5 +39,5 @@ class ConfigManager:
                 payload['value']
             )
 
-    def __getitem__(self, item):
-        return self.config_data[item]
+    def get_flag(self, slug: str):
+        return self.config_data.get(slug)
