@@ -28,15 +28,15 @@ client = SyncClient(
 try:
     config = client.get_config()
 except FipperConfigNotFoundException:
-    print('The config not available or unpublished')
+    print('The config is not available or unpublished')
     exit(1)
 
 feature_flag = config.get_flag('my_feature_flag')  # `my_feature_flag` - it's a slug of a feature flag
 
 if feature_flag and feature_flag.available:
-    print('`feature_flag` is available')
+    print('The `feature_flag` is available')
 else:
-    print('`feature_flag` is not available')
+    print('The `feature_flag` is not available')
 ```
 
 More information and more clients: https://docs.fipper.io

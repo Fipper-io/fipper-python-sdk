@@ -12,8 +12,8 @@ try:
 except ImportError:
     pass
 else:
-    from fipper_sdk.client.basic import *
-    modules.append('BasicSync')
+    from fipper_sdk.client.sync import *
+    modules.append('SyncClient')
 
 
 __all__ = modules
