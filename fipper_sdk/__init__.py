@@ -1,10 +1,13 @@
+from fipper_sdk.exceptions import FipperException, FipperConfigNotFoundException
 from fipper_sdk.manager import ConfigManager
 from fipper_sdk.utils import Rate
 
 
 modules = [
     'ConfigManager',
-    'Rate'
+    'Rate',
+    'FipperException',
+    'FipperConfigNotFoundException'
 ]
 
 try:

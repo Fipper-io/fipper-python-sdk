@@ -19,6 +19,9 @@ PROJECT_ID = 12345
 
 A code snippet for a sync version:
 ```python
+from fipper_sdk import SyncClient, FipperConfigNotFoundException
+
+
 client = SyncClient(
     environment=ENVIRONMENT,
     api_token=API_TOKEN,
