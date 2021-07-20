@@ -37,7 +37,7 @@ except FipperConfigNotFoundException:
 feature_flag = config.get_flag('my_feature_flag')  # `my_feature_flag` - it's a slug of a feature flag
 
 if feature_flag and feature_flag.available:
-    print('The `feature_flag` is available')
+    print(f'The `feature_flag` is available: {feature_flag.get_value()}')
 else:
     print('The `feature_flag` is not available')
 ```
