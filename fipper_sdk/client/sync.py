@@ -1,3 +1,4 @@
+import base64
 import gzip
 import json
 from datetime import datetime, timedelta
@@ -55,8 +56,8 @@ class SyncClient:
         if response.status_code == 200:
             raw_data = response.json()
             config_env = raw_data['config'].get(self.environment)
-            blob = json.loads(gzip.decompress(eval(config_env)))\
-                if config_env else dict()  # TODO: unsafe
+            blob = json.loads(gzip.decompress(base64.b64decode(config_env)))\
+                if config_env else dict()
 
             self.config = ConfigManager(config_data=blob)
             self.etag = raw_data['eTag']
