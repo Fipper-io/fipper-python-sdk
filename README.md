@@ -42,4 +42,4 @@ else:
     print('The `feature_flag` is not available')
 ```
 
-More information and more clients: https://docs.fipper.io
+More information and more client libraries: https://docs.fipper.io
