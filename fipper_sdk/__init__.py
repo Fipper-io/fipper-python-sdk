@@ -15,8 +15,17 @@ try:
 except ImportError:
     pass
 else:
-    from fipper_sdk.client.sync import *
+    from fipper_sdk.clients.sync_client import *
     modules.append('SyncClient')
+
+
+try:
+    import aiohttp
+except ImportError:
+    pass
+else:
+    from fipper_sdk.clients.async_client import *
+    modules.append('AsyncClient')
 
 
 __all__ = modules
