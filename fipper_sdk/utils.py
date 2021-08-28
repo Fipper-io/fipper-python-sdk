@@ -1,7 +1,7 @@
 from enum import IntEnum
 
 
-SERVER_HOST = 'https://sync.fipper.io'
+SERVER_HOST = 'https://sync2.fipper.io'
 
 
 class Rate(IntEnum):
