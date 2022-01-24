@@ -22,7 +22,7 @@ class AsyncClient(BaseClient):
 
         if self.previous_sync_date and self.config and self.etag:
             async with aiohttp.ClientSession() as session:
-                async with session.get(
+                async with session.head(
                         f'{SERVER_HOST}/hash',
                         params={
                             'apiToken': self.api_token,
